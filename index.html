@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Indica que es HTML5. Siempre primera línea. -->
+ 
+<html lang='es'>
+<!-- Elemento raíz. lang='es' ayuda a lectores de pantalla y buscadores. -->
+ 
+  <head>
+  <!-- Metadatos: el navegador los necesita pero no los muestra al usuario -->
+ 
+    <meta charset='UTF-8'>
+    <!-- Codificación de caracteres: soporta tildes, ñ, emojis -->
+ 
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Sin esto, en celular la página se ve muy pequeña -->
+ 
+    <title>TechStore - Tu tienda de tecnología</title>
+    <!-- Aparece en la pestaña del navegador y en Google -->
+ 
+    <link rel='stylesheet' href='estilos.css'>
+    <!-- Vincula el archivo CSS. El path es relativo al index.html -->
+    <!-- estilos.css debe estar en la misma carpeta que index.html -->
+  </head>
+ 
+  <body>
+
+  <!-- Todo lo visible va acá -->
+    <script src='js/app.js'></script>
+
+    <!-- JS SIEMPRE al final del body, antes de la etiqueta de cierre -->
+    <!-- Si va en el head, el script corre antes de que exista el HTML -->
+    <!-- y document.getElementById('productos') devuelve null -->
+  <header>
+    <h1>TechStore</h1>
+  
+    <nav class=" nav-principal">
+      <ul>
+        <li><a href='#inicio'>Inicio</a></li>
+        <li><a href='#productoss'>Productos</a></li>
+        <li><a href='#contacto'>Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section>
+      <h2 id='inicio'>Catalogo de productos</h2>
+      <article>
+        <h3>Notebook</h3>
+      </article>
+          <ul>
+            <li>MacBook Pro</li>
+            <li>Asus ROG</li>
+            <li>Dell XPS</li>
+          </ul>
+      <article>
+        <h3>Accesorios</h3>
+      </article>
+          <ul>
+            <li>Teclado Mecánico</li>
+            <li>Mouse bluetouch</li>
+            <li>Auriculares Inalámbricos</li>
+          </ul>
+     
+    </section>  
+    <section> 
+      <h2> Ofertas y Novedades</h2>
+      <ol>
+        <li>Teclado Mecánico</li>
+        <li>Mouse bluetouch</li>
+        <li>HP Legion</li>
+    </section>
+  </main>
+
+  <footer>
+    <h6>Juan Agustin Kukuchka - 2026</h6>
+  </footer>
+
+
+
+  </body>
+ 
+</html>
