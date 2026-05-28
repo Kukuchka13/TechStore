@@ -24,18 +24,13 @@
   <body>
 
   <!-- Todo lo visible va acá -->
-    <script src='js/app.js'></script>
-
-    <!-- JS SIEMPRE al final del body, antes de la etiqueta de cierre -->
-    <!-- Si va en el head, el script corre antes de que exista el HTML -->
-    <!-- y document.getElementById('productos') devuelve null -->
   <header>
     <h1>TechStore</h1>
   
     <nav class=" nav-principal">
       <ul>
         <li><a href='#inicio'>Inicio</a></li>
-        <li><a href='#productoss'>Productos</a></li>
+        <li><a href='#catalogo'>Productos</a></li>
         <li><a href='#contacto'>Contacto</a></li>
       </ul>
     </nav>
@@ -44,23 +39,11 @@
 
   <main>
     <section>
-      <h2 id='inicio'>Catalogo de productos</h2>
-      <article>
-        <h3>Notebook</h3>
-      </article>
-          <ul>
-            <li>MacBook Pro</li>
-            <li>Asus ROG</li>
-            <li>Dell XPS</li>
-          </ul>
-      <article>
-        <h3>Accesorios</h3>
-      </article>
-          <ul>
-            <li>Teclado Mecánico</li>
-            <li>Mouse bluetouch</li>
-            <li>Auriculares Inalámbricos</li>
-          </ul>     
+      <h2 id='catalogo'>Catalogo de productos</h2>
+      <div id='productos'></div> 
+      
+        
+      
     </section>  
     <section> 
       <h2> Ofertas y Novedades</h2>
@@ -77,6 +60,9 @@
 
 
 
+    <!-- JS al final del body para que el HTML ya exista cuando corra -->
+    <script src='js/app.js'></script>
   </body>
+  
  
 </html>
