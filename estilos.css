@@ -121,6 +121,7 @@ main h2 {
   font-weight: 700;
   margin-bottom: 15px;
   text-align: center;
+   
 }
 
 
@@ -131,9 +132,9 @@ main h2 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 15px;
-  
+  margin-bottom: 15px;  
 }
+
 article.tarjeta {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -155,12 +156,11 @@ article.tarjeta img {
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background var(--transition), transform var(--transition);
   letter-spacing: 0.2px;
 }
 
 
-.tarjeta-info button:not(:disabled) {
+/*.tarjeta-info button:not(:disabled) {
   background: var(--clr-accent);
   color: #fff;
 }
@@ -175,6 +175,13 @@ article.tarjeta img {
   color: var(--clr-danger);
   border: 1px solid rgba(239, 68, 68, 0.3);
   cursor: not-allowed;
+}*/
+.tarjeta-info p {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.4;
 }
 
 footer {
