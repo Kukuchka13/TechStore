@@ -140,11 +140,6 @@ const catalogo = [
     'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400'
   ),
   new Notebook(
-    'MacBook Air M2', 'Apple', 2100000, 4,
-    'https://images.unsplash.com/photo-1611186871525-5a0c4f200c34?w=400',
-    'M2', 8, 256, 13.3
-  ),
-  new Notebook(
     'Dell XPS 13', 'Dell', 1800000, 7,
     'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400',
     'Intel i7', 16, 512, 13.4
