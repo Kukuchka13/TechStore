@@ -1,43 +1,37 @@
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-:root {
-  --clr-bg:           #212641;
-  --clr-surface:      #151829;
-  --clr-surface-2:    #1e2138;
-  --clr-accent:       #6c63ff;
-  --clr-accent-hover: #8b84ff;
-  --clr-text:         #e2e8f0;
-  --clr-text-muted:   #ffffff;
-  --clr-border:       rgba(255, 255, 255, 0.07);
-  --clr-success:      #22c55e;
-  --clr-danger:       #ef4444;
-  --radius-sm:        8px;
-  --radius:           14px;
-  --radius-lg:        20px;
-  --shadow-sm:        0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow:           0 8px 32px rgba(0, 0, 0, 0.5);
-  --transition:       0.2s ease;
-  --max-width:        1280px;
-}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background-color: var(--clr-bg);
-  color: var(--clr-text);
+  background-color: #212641;
+  color: #e2e8f0;
   min-height: 100vh;
   line-height: 1.6;
 }
 
+
+  
+
+
+#inicio {
+  background-image: url('img/fond2.gif');
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+}
+
 header {
   background: linear-gradient(135deg, #1a1040 0%, #0d1a40 100%);
-  border-bottom: 1px solid var(--clr-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -49,7 +43,7 @@ header > h1 {
 }
 
 nav.nav-principal {
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 3rem);
   display: flex;
@@ -63,7 +57,7 @@ nav.nav-principal::before {
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  background: linear-gradient(90deg, var(--clr-accent), #ccc0f3);
+  background: linear-gradient(90deg, #6c63ff, #ccc0f3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -77,16 +71,15 @@ nav.nav-principal ul {
 
 nav.nav-principal a {
   text-decoration: none;
-  color: var(--clr-text-muted);
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 6px 14px;
-  border-radius: var(--radius-sm);
-  
+  border-radius: 8px;
 }
 
 nav.nav-principal a:hover {
-  color: var(--clr-text);
+  color: #e2e8f0;
   background: rgba(108, 99, 255, 0.15);
 }
 
@@ -105,101 +98,203 @@ nav.nav-principal a:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 main {
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
   gap: 48px;
-  
-  }
+}
 
 main h2 {
-  color: var(--clr-text-muted);
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 15px;
   text-align: center;
-   
 }
 
-
-
 .tarjeta {
-  background-color: var(--clr-surface);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
+  background-color: #151829;
   gap: 16px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px; 
+  width: 25%; 
+  flex: 0 1 360px;
+
 }
 
 article.tarjeta {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 article.tarjeta img {
-  width: 20%;
-  height: 180px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   display: block;
   background: #0a0b14;
+  display: block;
+
+  
 }
+
+
+
+.tarjeta-info {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+
+.tarjeta-info h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
 
 .tarjeta-info button {
   margin-top: auto;
   padding: 10px 16px;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 0.2px;
 }
 
+#productos {  
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  border:  1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
 
-/*.tarjeta-info button:not(:disabled) {
-  background: var(--clr-accent);
+
+#productos .tarjeta-info button {
+  background: #6c63ff;
   color: #fff;
 }
-
-.tarjeta-info button:not(:disabled):hover {
-  background: var(--clr-accent-hover);
+#productos .tarjeta-info button:hover {
+  background: #8b84ff;
   transform: scale(1.02);
 }
-
-.tarjeta-info button:disabled {
+#productos .tarjeta-info button:disabled {
   background: rgba(239, 68, 68, 0.15);
-  color: var(--clr-danger);
+  color: #ef4444;
   border: 1px solid rgba(239, 68, 68, 0.3);
   cursor: not-allowed;
-}*/
+}
+#productos .tarjeta-info button:disabled:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+
+
+
 .tarjeta-info p {
   font-size: 0.9rem;
-  color: var(--clr-text);
+  color: #e2e8f0;
   font-weight: 700;
   text-align: left;
   line-height: 1.4;
 }
 
+.tarjeta ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 5px;
+}
+
+.tarjeta li {
+  font-size: 0.85rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 footer {
   text-align: center;
   padding: 24px;
-  background: var(--clr-surface);
-  border-top: 1px solid var(--clr-border);
-  color: var(--clr-text-muted);
+  background: #151829;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: #ffffff;
   font-size: 0.85rem;
+}
+
+section h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  background: rgba(41, 41, 46, 0.393);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.subtitulo {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: center;
+  background: rgba(41, 41, 46, 0.393);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(127, 112, 112, 0.3);
+}
+
+section#contacto {
+  background: #151829;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 15px rgba(64, 63, 63, 0.5);
+  margin-bottom: 30px;
+}
+
+section#contacto h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+section#contacto p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+
+}
+section#contacto ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 footer h6 {
   font-weight: 400;
-  
 }
-
-
-
-
-
-  
